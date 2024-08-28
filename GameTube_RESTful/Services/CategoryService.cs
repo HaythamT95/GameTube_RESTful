@@ -13,17 +13,17 @@ namespace GameTube_RESTful.Services
 
         public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
         {
-            return await _context.Categories.ToListAsync();
+            return await _context.Category.ToListAsync();
         }
 
         public async Task<Category> GetCategoryByIdAsync(int id)
         {
-            return await _context.Categories.FindAsync(id);
+            return await _context.Category.FindAsync(id);
         }
 
         public async Task AddCategoryAsync(Category category)
         {
-            _context.Categories.Add(category);
+            _context.Category.Add(category);
             await _context.SaveChangesAsync();
         }
 
@@ -35,17 +35,17 @@ namespace GameTube_RESTful.Services
 
         public async Task DeleteCategoryAsync(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
+            var category = await _context.Category.FindAsync(id);
             if (category != null)
             {
-                _context.Categories.Remove(category);
+                _context.Category.Remove(category);
                 await _context.SaveChangesAsync();
             }
         }
 
         public bool CategoryExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryId == id);
+            return _context.Category.Any(e => e.CategoryId == id);
         }
     }
 }

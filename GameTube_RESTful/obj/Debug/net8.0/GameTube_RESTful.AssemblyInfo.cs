@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameTube_RESTful")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88915192f77569af681d7367f249bd4904f1ab17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77c9f43d44aafe23cb45d4ab9390dc7a40074043")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameTube_RESTful")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameTube_RESTful")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

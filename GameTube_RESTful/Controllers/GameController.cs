@@ -1,5 +1,6 @@
 ﻿using GameTube_RESTful.Models;
 using GameTube_RESTful.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace GameTube_RESTful.Controllers
         private readonly GameService _gameService = gameService;
 
         [HttpGet]
+        //[Authorize] //Adds Bearer token authorization
         public async Task<ActionResult<IEnumerable<Game>>> GetAllGames()
         {
             var games = await _gameService.GetAllGamesAsync();

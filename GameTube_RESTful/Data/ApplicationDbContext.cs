@@ -6,8 +6,8 @@ namespace GameTube_RESTful.Data
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
     {
         public DbSet<User> User { get; set; }
-        public DbSet<Game> Games { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Game> Game { get; set; }
+        public DbSet<Category> Category { get; set; }
         public DbSet<GameCategory> GameCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

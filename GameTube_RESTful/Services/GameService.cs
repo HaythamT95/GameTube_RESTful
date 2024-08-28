@@ -13,12 +13,12 @@ namespace GameTube_RESTful.Services
 
         public async Task<IEnumerable<Game>> GetAllGamesAsync()
         {
-            return await _context.Games.ToListAsync();
+            return await _context.Game.ToListAsync();
         }
 
         public async Task<Game> GetGameByIdAsync(int id)
         {
-            return await _context.Games.FindAsync(id);
+            return await _context.Game.FindAsync(id);
         }
 
         public async Task<IEnumerable<Game>> GetGamesByCategoryAsync(int categoryId)
@@ -31,7 +31,7 @@ namespace GameTube_RESTful.Services
 
         public async Task AddGameAsync(Game game)
         {
-            _context.Games.Add(game);
+            _context.Game.Add(game);
             await _context.SaveChangesAsync();
         }
 
@@ -43,17 +43,17 @@ namespace GameTube_RESTful.Services
 
         public async Task DeleteGameAsync(int id)
         {
-            var game = await _context.Games.FindAsync(id);
+            var game = await _context.Game.FindAsync(id);
             if (game != null)
             {
-                _context.Games.Remove(game);
+                _context.Game.Remove(game);
                 await _context.SaveChangesAsync();
             }
         }
 
         public bool GameExists(int id)
         {
-            return _context.Games.Any(e => e.GameId == id);
+            return _context.Game.Any(e => e.GameId == id);
         }
     }
 }
