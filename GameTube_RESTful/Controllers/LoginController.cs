@@ -32,27 +32,9 @@ namespace GameTube_RESTful.Controllers
                 return Unauthorized("Invalid email or password.");
             }
 
-            var token = GenerateJwtToken(user);
+            var token = _jwtSettings.GenerateJwtToken(user);
 
             return Ok(new { token });
         }
-
-        private string GenerateJwtToken(User user)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(
-                [
-                    new Claim(ClaimTypes.Name, user.Email)
-                ]),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-        }
-
     }
 }

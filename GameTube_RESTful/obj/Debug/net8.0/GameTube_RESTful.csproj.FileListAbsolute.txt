@@ -44,3 +44,4 @@ C:\Users\hayth\source\repos\GameTube_RESTful\GameTube_RESTful\obj\Debug\net8.0\r
 C:\Users\hayth\source\repos\GameTube_RESTful\GameTube_RESTful\obj\Debug\net8.0\GameTube_RESTful.pdb
 C:\Users\hayth\source\repos\GameTube_RESTful\GameTube_RESTful\obj\Debug\net8.0\GameTube_RESTful.genruntimeconfig.cache
 C:\Users\hayth\source\repos\GameTube_RESTful\GameTube_RESTful\obj\Debug\net8.0\ref\GameTube_RESTful.dll
+C:\Users\hayth\source\repos\GameTube_RESTful\GameTube_RESTful\obj\Debug\net8.0\GameTube_RESTful.sourcelink.json
