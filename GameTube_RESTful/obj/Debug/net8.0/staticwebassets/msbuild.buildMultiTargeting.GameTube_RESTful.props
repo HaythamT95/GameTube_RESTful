@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GameTube_RESTful.props" />
+</Project>

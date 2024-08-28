@@ -1,0 +1,6 @@
+@GameTube_RESTful_HostAddress = http://localhost:5156
+
+GET {{GameTube_RESTful_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
